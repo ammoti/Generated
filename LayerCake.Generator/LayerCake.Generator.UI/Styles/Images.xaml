@@ -1,0 +1,30 @@
+<ResourceDictionary
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+	<BitmapImage
+        x:Key="AboutImage"
+        UriSource="/LayerCake.Generator.UI;component/Resources/Images/About.png" />
+	<BitmapImage
+        x:Key="CodeRefsImage"
+        UriSource="/LayerCake.Generator.UI;component/Resources/Images/CodeRefs.png" />
+	<BitmapImage
+        x:Key="ExitImage"
+        UriSource="/LayerCake.Generator.UI;component/Resources/Images/Exit.png" />
+	<BitmapImage
+        x:Key="HelpImage"
+        UriSource="/LayerCake.Generator.UI;component/Resources/Images/Help.png" />
+	<BitmapImage
+        x:Key="LicenseImage"
+        UriSource="/LayerCake.Generator.UI;component/Resources/Images/License.png" />
+	<BitmapImage
+        x:Key="LogoImage"
+        UriSource="/LayerCake.Generator.UI;component/Resources/Images/Logo.png" />
+	<BitmapImage
+        x:Key="TranslationsImage"
+        UriSource="/LayerCake.Generator.UI;component/Resources/Images/Translations.png" />
+	<BitmapImage
+        x:Key="UpdateImage"
+        UriSource="/LayerCake.Generator.UI;component/Resources/Images/Update.png" />
+
+</ResourceDictionary>

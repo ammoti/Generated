@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Templates>
+  <Template culture="EN">
+    <Subject>
+      <![CDATA[Welcome!]]></Subject>
+    <Message>
+      <![CDATA[
+<div id="header">
+    <em>Site logo here...</em>
+    <!--<img src="http://www.your-site.com/images/mail-logo.png" alt="Site slogan here" />-->
+</div>
+<div id="content">
+    <p>Welcome and thanks for joining!</p>
+    <p>Here is your login information:</p>
+    <p>Username: %User.Username%</p>
+    <p>Password: ********</p>
+    <p>Email: %User.Email%</p>
+    <p>Secret question: %User.PasswordQuestion%</p>
+    <p>Secret response: %User.PasswordResponse%</p>
+    <p>If you have any questions, please do not hesitate to contact us.</p>
+</div>
+<div id="footer">
+    <br />
+    <p>Best regards,</p>
+    <p>VahapYigit.Test Staff<br />
+      <a href="http://www.your-site.com">http://www.your-site.com</a><br />
+      <a href="mailto:contact@your-site.com">contact@your-site.com</a>
+    </p>
+</div>
+      ]]>
+    </Message>
+  </Template>
+  <Template culture="FR">
+    <Subject>
+      <![CDATA[Welcome!]]>
+    </Subject>
+    <Message>
+      <![CDATA[
+<div id="header">
+    <em>Site logo here...</em>
+    <!--<img src="http://www.your-site.com/images/mail-logo.png" alt="Site slogan here" />-->
+</div>
+<div id="content">
+    <p>Welcome and thanks for joining!</p>
+    <p>Here is your login information:</p>
+    <p>Username: %User.Username%</p>
+    <p>Password: ********</p>
+    <p>Email: %User.Email%</p>
+    <p>Secret question: %User.PasswordQuestion%</p>
+    <p>Secret response: %User.PasswordResponse%</p>
+    <p>If you have any questions, please do not hesitate to contact us.</p>
+</div>
+<div id="footer">
+    <br />
+    <p>Best regards,</p>
+    <p>VahapYigit.Test Staff<br />
+      <a href="http://www.your-site.com">http://www.your-site.com</a><br />
+      <a href="mailto:contact@your-site.com">contact@your-site.com</a>
+    </p>
+</div>
+      ]]>
+    </Message>
+  </Template>
+  <Template culture="ES">
+    <Subject>
+      <![CDATA[Welcome!]]>
+    </Subject>
+    <Message>
+      <![CDATA[
+<div id="header">
+    <em>Site logo here...</em>
+    <!--<img src="http://www.your-site.com/images/mail-logo.png" alt="Site slogan here" />-->
+</div>
+<div id="content">
+    <p>Welcome and thanks for joining!</p>
+    <p>Here is your login information:</p>
+    <p>Username: %User.Username%</p>
+    <p>Password: ********</p>
+    <p>Email: %User.Email%</p>
+    <p>Secret question: %User.PasswordQuestion%</p>
+    <p>Secret response: %User.PasswordResponse%</p>
+    <p>If you have any questions, please do not hesitate to contact us.</p>
+</div>
+<div id="footer">
+    <br />
+    <p>Best regards,</p>
+    <p>VahapYigit.Test Staff<br />
+      <a href="http://www.your-site.com">http://www.your-site.com</a><br />
+      <a href="mailto:contact@your-site.com">contact@your-site.com</a>
+    </p>
+</div>
+      ]]>
+    </Message>
+  </Template>
+  <Template culture="DE">
+    <Subject>
+      <![CDATA[Welcome!]]>
+    </Subject>
+    <Message>
+      <![CDATA[
+<div id="header">
+    <em>Site logo here...</em>
+    <!--<img src="http://www.your-site.com/images/mail-logo.png" alt="Site slogan here" />-->
+</div>
+<div id="content">
+    <p>Welcome and thanks for joining!</p>
+    <p>Here is your login information:</p>
+    <p>Username: %User.Username%</p>
+    <p>Password: ********</p>
+    <p>Email: %User.Email%</p>
+    <p>Secret question: %User.PasswordQuestion%</p>
+    <p>Secret response: %User.PasswordResponse%</p>
+    <p>If you have any questions, please do not hesitate to contact us.</p>
+</div>
+<div id="footer">
+    <br />
+    <p>Best regards,</p>
+    <p>VahapYigit.Test Staff<br />
+      <a href="http://www.your-site.com">http://www.your-site.com</a><br />
+      <a href="mailto:contact@your-site.com">contact@your-site.com</a>
+    </p>
+</div>
+      ]]>
+    </Message>
+  </Template>
+</Templates>

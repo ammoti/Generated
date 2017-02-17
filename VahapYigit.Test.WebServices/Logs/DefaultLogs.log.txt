@@ -1,0 +1,8 @@
+[2017-02-17, 20:04:26.8591] [Info] [ServiceLocator::.ctor()] Registered Singleton -> System.LoggerService, System.Extensions 
+[2017-02-17, 20:04:26.8851] [Info] [ServiceLocator::.ctor()] Registered Singleton -> System.LocalMemoryCacheService, System.Extensions 
+[2017-02-17, 20:04:26.8881] [Info] [ServiceLocator::.ctor()] Registered Singleton -> System.MessengerService, System.Extensions 
+[2017-02-17, 20:04:26.9161] [Info] [ServiceLocator::.ctor()] Registered Singleton -> System.SmtpService, System.Extensions 
+[2017-02-17, 20:05:05.0231] [Info] [ServiceLocator::.ctor()] Registered Singleton -> System.LoggerService, System.Extensions 
+[2017-02-17, 20:05:05.0281] [Info] [ServiceLocator::.ctor()] Registered Singleton -> System.LocalMemoryCacheService, System.Extensions 
+[2017-02-17, 20:05:05.0311] [Info] [ServiceLocator::.ctor()] Registered Singleton -> System.MessengerService, System.Extensions 
+[2017-02-17, 20:05:05.0351] [Info] [ServiceLocator::.ctor()] Registered Singleton -> System.SmtpService, System.Extensions 

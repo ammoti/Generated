@@ -1,0 +1,3 @@
+
+The Includes.ttinclude file must contain <#@ ... #> entries only.
+Adding others entries (comments for example) may break the templates outputs.

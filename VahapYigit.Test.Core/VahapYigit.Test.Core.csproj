@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C8B244D8-7EE5-48B7-B8BD-1C687238EC12}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>VahapYigit.Test.Core</RootNamespace>
+    <AssemblyName>VahapYigit.Test.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <DocumentationFile>
+    </DocumentationFile>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.XML" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Crud\AccentSensitivity.cs" />
+    <Compile Include="Attributes\BusinessMethodAttribute.cs" />
+    <Compile Include="Attributes\BusinessClassAttribute.cs" />
+    <Compile Include="Crud\FilterListExtensions.cs" />
+    <Compile Include="Crud\OrderListExtensions.cs" />
+    <Compile Include="Enums\Cultures.cs" />
+    <Compile Include="Exceptions\EntityNotFoundException.cs" />
+    <Compile Include="Exceptions\TechnicalException.cs" />
+    <Compile Include="Exceptions\EntityValidationException.cs" />
+    <Compile Include="Exceptions\OperationException.cs" />
+    <Compile Include="Data\DataMapping\IDataReaderMapping.cs" />
+    <Compile Include="Data\DataMapping\IDataRowMapping.cs" />
+    <Compile Include="Services\DataBinService\DataBinService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Services\DataBinService\IDataBinServiceService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Services\DataBinService\IDataRowToEntityMappingBehavior.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Services\TemplateService\ITemplateService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Services\TemplateService\MailTemplate.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Services\TemplateService\MailTemplateService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Services\TemplateService\MailTemplateServiceSection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Services\TemplateService\MailTemplateServiceSectionHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Services\WcfOperationSecurity\WcfOperationSecuritySection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Services\WcfOperationSecurity\WcfOperationSecuritySectionHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Services\WcfServiceTracking\WcfServiceTrackingSection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Services\WcfServiceTracking\WcfServiceTrackingSectionHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Translations\TranslationExtensions.cs" />
+    <Compile Include="Translations\TranslationHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Crud\CrudOptions.cs" />
+    <Compile Include="Extensions\CollectionExtensions.cs" />
+    <Compile Include="Crud\OrderOperator.cs" />
+    <Compile Include="Crud\Order.cs" />
+    <Compile Include="Crud\Filter.cs" />
+    <Compile Include="Crud\FilterOperator.cs" />
+    <Compile Include="Crud\SearchOptions.cs" />
+    <Compile Include="GlobalAssemblyInfo.cs" />
+    <Compile Include="Globals.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Crud\SaveOptions.cs" />
+    <Compile Include="Enums\Cultures.generated.cs" />
+    <Compile Include="Collections\LanguageCollection.generated.cs" />
+    <Compile Include="Translations\TranslationEnum.generated.cs" />
+    <Compile Include="UserContext\ClientContext.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="UserContext\IUserContext.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="UserContext\UserContextOptions.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Wcf\EntityValidationErrorHandler.cs" />
+    <Compile Include="Wcf\EntityValidationExceptionBehaviorAttribute.cs" />
+    <Compile Include="Wcf\EntityValidationExceptionElement.cs" />
+    <Compile Include="Wcf\EntityValidationExceptionMessageInspector.cs" />
+    <Compile Include="Wcf\OperationExceptionBehaviorAttribute.cs" />
+    <Compile Include="Wcf\OperationExceptionElement.cs" />
+    <Compile Include="Wcf\OperationExceptionErrorHandler.cs" />
+    <Compile Include="Wcf\OperationExceptionMessageInspector.cs" />
+    <Compile Include="Wcf\TechnicalExceptionBehaviorAttribute.cs" />
+    <Compile Include="Wcf\TechnicalExceptionElement.cs" />
+    <Compile Include="Wcf\TechnicalExceptionErrorHandler.cs" />
+    <Compile Include="Wcf\TechnicalExceptionMessageInspector.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\System.Extensions\System.Extensions.csproj">
+      <Project>{0B4C3CC6-DBCA-44E9-B2C6-BC6168EAC842}</Project>
+      <Name>System.Extensions</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

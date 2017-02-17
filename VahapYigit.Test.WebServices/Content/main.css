@@ -1,0 +1,32 @@
+
+#mainContent {
+	margin: 70px 10px 0px 14px;
+}
+
+.left {
+	text-align: left;
+}
+
+.center {
+	text-align: center;
+}
+
+.right {
+	text-align: right;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+.cache-hit {
+	color: #008000;
+}
+
+.cache-miss {
+	color: firebrick;
+}
+
+.filter-control {
+	width: 160px;
+}

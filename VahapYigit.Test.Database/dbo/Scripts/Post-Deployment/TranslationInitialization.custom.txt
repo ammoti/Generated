@@ -1,0 +1,3 @@
+
+Open the Post-Deployment folder to access to the TranslationInitialization.custom.sql file.
+DO NO ADD IT TO THE PROJECT OTHERWISE THE DATABASE PROJECT WON'T BUILD

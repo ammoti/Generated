@@ -1,0 +1,8 @@
+<#@ template debug="false" hostspecific="false" language="C#" #>
+<#@ parameter name="Context" type="LayerCake.Generator.Commons.TextTemplatingProcessContext" #>
+<#@ include file="Commons/Includes.ttinclude" #>
+<%@ServiceHost
+  Debug="true"
+  Language="C#"
+  Service="<#=Context.ProcessorContext.ProjectName#>.Services.<#=Context.Table.Name#>Service"
+  Factory="<#=Context.ProcessorContext.ProjectName#>.WebServices.CustomServiceHostFactory"%>

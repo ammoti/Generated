@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0B4C3CC6-DBCA-44E9-B2C6-BC6168EAC842}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>System.Extensions</RootNamespace>
+    <AssemblyName>System.Extensions</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.XML" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Adapters\DirectoryTreeNodeAdapter.cs" />
+    <Compile Include="Attributes\CachingOperationAttribute.cs" />
+    <Compile Include="Attributes\CachingOperationInvoker.cs" />
+    <Compile Include="Attributes\ParameterAttribute.cs" />
+    <Compile Include="Attributes\OperationSecurityAttribute.cs" />
+    <Compile Include="Attributes\CriteriaMemberAttribute.cs" />
+    <Compile Include="Attributes\RequiredPropertyAttribute.cs" />
+    <Compile Include="Attributes\TrackedPropertyAttribute.cs" />
+    <Compile Include="Collections\ObservableCollectionReentrancy.cs" />
+    <Compile Include="Collections\OTCollection.cs" />
+    <Compile Include="Collections\RoundStack.cs" />
+    <Compile Include="Collections\TCollection.cs" />
+    <Compile Include="Common\DateTimeRange.cs" />
+    <Compile Include="Common\PagingOptions.cs" />
+    <Compile Include="Common\Range.cs" />
+    <Compile Include="Controllers\RequiredPropertyController.cs" />
+    <Compile Include="Controllers\TrackedPropertyController.cs" />
+    <Compile Include="Diagnostics\BenchmarkExecution.cs" />
+    <Compile Include="EqualityComparer\ReferenceEqualityComparer.cs" />
+    <Compile Include="Exceptions\ThrowException.cs" />
+    <Compile Include="Extensions\ActionExtensions.cs" />
+    <Compile Include="Extensions\ArrayExtensions.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Extensions\AssemblyExtensions.cs" />
+    <Compile Include="Extensions\DataTableExtensions.cs" />
+    <Compile Include="Extensions\DictionaryExtensions.cs" />
+    <Compile Include="Extensions\DisposableExtensions.cs" />
+    <Compile Include="Extensions\ICollectionExtensions.cs" />
+    <Compile Include="Extensions\LinqExtensions.cs" />
+    <Compile Include="Extensions\INotifyPropertyChangedExtentions.cs" />
+    <Compile Include="Extensions\INotifyPropertyChangingExtentions.cs" />
+    <Compile Include="Extensions\Int16Extensions.cs" />
+    <Compile Include="Extensions\Int64Extensions.cs" />
+    <Compile Include="Extensions\Int32Extensions.cs" />
+    <Compile Include="Extensions\ObjectExtensions.cs" />
+    <Compile Include="Helpers\CultureHelper.cs" />
+    <Compile Include="Security\SecurePropertyInfo.cs" />
+    <Compile Include="Services\CacheService\CacheDuration.cs" />
+    <Compile Include="Services\CacheService\CacheItemDisplay.cs" />
+    <Compile Include="Tree\TreeNodeBase.cs" />
+    <Compile Include="Tree\ITreeNodeExtensions.cs" />
+    <Compile Include="Tree\ITreeNode.cs" />
+    <Compile Include="Helpers\BitZipHelper.cs" />
+    <Compile Include="Helpers\ConfigurationManagerHelper.cs" />
+    <Compile Include="Helpers\DateTimeHelper.cs" />
+    <Compile Include="Helpers\DebugHelper.cs" />
+    <Compile Include="Helpers\DirectoryHelper.cs" />
+    <Compile Include="Helpers\MessageQueueHelper.cs" />
+    <Compile Include="Helpers\ObjectHelper.cs" />
+    <Compile Include="Helpers\PathHelper.cs" />
+    <Compile Include="Helpers\ServerCertificateValidationHelper.cs" />
+    <Compile Include="Helpers\SqlServerFullTextSearchHelper.cs" />
+    <Compile Include="Helpers\StringZipHelper.cs" />
+    <Compile Include="Helpers\TransactionScopeHelper.cs" />
+    <Compile Include="Helpers\VisualStudioHelper.cs" />
+    <Compile Include="Helpers\WebRequestHelper.cs" />
+    <Compile Include="Helpers\XmlHelper.cs" />
+    <Compile Include="Patterns\EditableAdapter\EditableAdapter.cs" />
+    <Compile Include="Patterns\EditableAdapter\InternalPropertyDescriptorFactory.cs" />
+    <Compile Include="Patterns\EditableAdapter\PropertyDescriptorFactory.cs" />
+    <Compile Include="Patterns\Memento\IMemento.cs" />
+    <Compile Include="Patterns\Memento\Memento.cs" />
+    <Compile Include="Pool\IPooledObject.cs" />
+    <Compile Include="Pool\PoolAccessModeEnum.cs" />
+    <Compile Include="Pool\IPoolableObject.cs" />
+    <Compile Include="Pool\PoolLoadingModeEnum.cs" />
+    <Compile Include="Pool\Pool.cs" />
+    <Compile Include="Pool\PooledObject.cs" />
+    <Compile Include="Security\IEncryptorProvider.cs" />
+    <Compile Include="Interfaces\IObjectValidityDateRange.cs" />
+    <Compile Include="Security\ISecurePropertyProvider.cs" />
+    <Compile Include="Security\MachineKeyHelper.cs" />
+    <Compile Include="Security\SecureObjectHelper.cs" />
+    <Compile Include="Security\TripleDesSecurePropertyProvider.cs" />
+    <Compile Include="ServiceModel\Extensions\MessageExtensions.cs" />
+    <Compile Include="ServiceModel\Helpers\WcfHelper.cs" />
+    <Compile Include="Services\CacheService\CacheServiceHelper.cs" />
+    <Compile Include="Services\CacheService\ICacheStatistics.cs" />
+    <Compile Include="Services\LoggerService\LoggerServiceHelper.cs" />
+    <Compile Include="Services\MessengerService\MessengerServiceHelper.cs" />
+    <Compile Include="Services\ServiceLocator\InstancingMode.cs" />
+    <Compile Include="Services\ServiceLocator\IServiceLocator.cs" />
+    <Compile Include="Services\SmtpService\SmtpServiceHelper.cs" />
+    <Compile Include="Services\TracerService\ActionExecutionTracerService.cs" />
+    <Compile Include="Services\TracerService\DebugExecutionTracerService.cs" />
+    <Compile Include="Services\TracerService\ExecutionTracerContext.cs" />
+    <Compile Include="Services\TracerService\QueueExecutionTracerService\IQueueExecutionTracerBehavior.cs" />
+    <Compile Include="Services\TracerService\QueueExecutionTracerService\QueueExecutionTracerService.cs" />
+    <Compile Include="Services\TracerService\QueueExecutionTracerService\QueueExecutionTracerServiceSection.cs" />
+    <Compile Include="Services\TracerService\QueueExecutionTracerService\QueueExecutionTracerServiceSectionHandler.cs" />
+    <Compile Include="Services\TracerService\XmlExecutionTracerService\XmlExecutionTracerServiceSection.cs" />
+    <Compile Include="Services\TracerService\XmlExecutionTracerService\XmlExecutionTracerServiceSectionHandler.cs" />
+    <Compile Include="Threading\IPauseToken.cs" />
+    <Compile Include="Threading\PauseToken.cs" />
+    <Compile Include="Threading\PauseTokenSource.cs" />
+    <Compile Include="Tools\ClockManipulation.cs" />
+    <Compile Include="Tools\FingerPrintProvider.cs" />
+    <Compile Include="Helpers\RegistryHelper.cs" />
+    <Compile Include="Helpers\EnumHelper.cs" />
+    <Compile Include="Helpers\TimeSpanHelper.cs" />
+    <Compile Include="Patterns\Transmitter\ITransmitter.cs" />
+    <Compile Include="Patterns\Transmitter\IReceiver.cs" />
+    <Compile Include="Tools\SearchCriterias.cs" />
+    <Compile Include="Exceptions\ConditionException.cs" />
+    <Compile Include="Extensions\DataRowExtensions.cs" />
+    <Compile Include="Extensions\ExceptionExtensions.cs" />
+    <Compile Include="Extensions\IDataReaderExtensions.cs" />
+    <Compile Include="Extensions\LinqDynamicExtensions.cs" />
+    <Compile Include="Extensions\ObjectIDGeneratorExtensions.cs" />
+    <Compile Include="Extensions\StringExtensions.cs" />
+    <Compile Include="Extensions\TimeSpanExtensions.cs" />
+    <Compile Include="Extensions\TypeExtensions.cs" />
+    <Compile Include="Extensions\WebRequestExtensions.cs" />
+    <Compile Include="Helpers\AttributeHelper.cs" />
+    <Compile Include="Extensions\DateTimeExtensions.cs" />
+    <Compile Include="Helpers\DataTableHelper.cs" />
+    <Compile Include="Helpers\EmbbedResourceHelper.cs" />
+    <Compile Include="Helpers\FileHelper.cs" />
+    <Compile Include="Helpers\AsyncHelper.cs" />
+    <Compile Include="Helpers\HashHelper.cs" />
+    <Compile Include="Helpers\KeyGeneratorHelper.cs" />
+    <Compile Include="Helpers\ParameterInfoHelper.cs" />
+    <Compile Include="Helpers\RandomHelper.cs" />
+    <Compile Include="Helpers\ReflectionHelper.cs" />
+    <Compile Include="Helpers\ValidationHelper.cs" />
+    <Compile Include="Helpers\SignatureHelper.cs" />
+    <Compile Include="Helpers\SerializerHelper.cs" />
+    <Compile Include="Helpers\TypeHelper.cs" />
+    <Compile Include="Interfaces\IKeyGenerator.cs" />
+    <Compile Include="Interfaces\ISearchCriterias.cs" />
+    <Compile Include="Patterns\Multiton.cs" />
+    <Compile Include="Patterns\Singleton.cs" />
+    <Compile Include="Patterns\Visitor\IAcceptor.cs" />
+    <Compile Include="Patterns\Visitor\IVisitor.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reflection\ProxyDomain.cs" />
+    <Compile Include="Services\CacheService\CacheItem.cs" />
+    <Compile Include="Services\CacheService\CacheStatistics.cs" />
+    <Compile Include="Services\CacheService\ICacheService.cs" />
+    <Compile Include="Services\CacheService\LocalMemoryCacheService.cs" />
+    <Compile Include="Services\LoggerService\ILoggerService.cs" />
+    <Compile Include="Services\LoggerService\LoggerService.cs" />
+    <Compile Include="Services\LoggerService\LoggerServiceSection.cs" />
+    <Compile Include="Services\LoggerService\LoggerServiceSectionHandler.cs" />
+    <Compile Include="Services\LoggerService\LogStatusEnum.cs" />
+    <Compile Include="Services\MessengerService\IMessengerService.cs" />
+    <Compile Include="Services\MessengerService\MessengerService.cs" />
+    <Compile Include="Services\MessengerService\MessengerKey.cs" />
+    <Compile Include="Services\ServiceLocator\ServiceLocator.cs" />
+    <Compile Include="Services\ServiceLocator\ServiceLocatorException.cs" />
+    <Compile Include="Services\ServiceLocator\ServiceLocatorSection.cs" />
+    <Compile Include="Services\ServiceLocator\ServiceLocatorSectionHandler.cs" />
+    <Compile Include="Services\SmtpService\ISmtpService.cs" />
+    <Compile Include="Services\SmtpService\SmtpService.cs" />
+    <Compile Include="Services\SmtpService\SmtpServiceOptions.cs" />
+    <Compile Include="Services\SmtpService\SmtpServiceSection.cs" />
+    <Compile Include="Services\SmtpService\SmtpServiceSectionHandler.cs" />
+    <Compile Include="Services\TimeWatcherService\ITimeWatcherService.cs" />
+    <Compile Include="Services\TimeWatcherService\TimeWatcherService.cs" />
+    <Compile Include="Services\TracerService\ITracerService.cs" />
+    <Compile Include="Services\TracerService\XmlExecutionTracerService\XmlExecutionTracerService.cs" />
+    <Compile Include="Tools\ConditionChecker.cs" />
+    <Compile Include="EqualityComparer\PropertyEqualityComparer.cs" />
+    <Compile Include="ServiceModel\Helpers\ClientMessageInspectorHelper.cs" />
+    <Compile Include="Security\TripleDesEncryptorProvider.cs" />
+    <Compile Include="Tree\TreeNodeHelper.cs" />
+    <Compile Include="Web\CookieHelper.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

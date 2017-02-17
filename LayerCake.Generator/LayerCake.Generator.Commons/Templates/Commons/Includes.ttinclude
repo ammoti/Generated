@@ -1,0 +1,41 @@
+<#@ assembly name="System.Data" #>
+<#@ assembly name="System.Core.dll" #>
+<#@ assembly name="System.ServiceModel.dll" #>
+<#@ assembly name="System.Transactions.dll" #>
+<#@ assembly name="System.Windows.Forms.dll" #>
+<#@ assembly name="System.Xml" #>
+
+<#@ assembly name="Microsoft.SqlServer.ConnectionInfo.dll" #>
+<#@ assembly name="Microsoft.SqlServer.Management.Sdk.Sfc.dll" #>
+<#@ assembly name="Microsoft.SqlServer.Smo.dll" #>
+<#@ assembly name="Microsoft.SqlServer.SqlEnum.dll" #>
+
+<#@ assembly name="System.Extensions.dll" #>
+
+<#@ assembly name="LayerCake.Generator.Commons.dll" #>
+
+<#@ import namespace="System.Collections.Generic" #>
+<#@ import namespace="System.Data" #>
+<#@ import namespace="System.Data.SqlClient" #>
+<#@ import namespace="System.Diagnostics" #>
+<#@ import namespace="System.IO" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Net.Security" #>
+<#@ import namespace="System.Reflection" #>
+<#@ import namespace="System.Runtime.Remoting.Messaging" #>
+<#@ import namespace="System.ServiceModel" #>
+<#@ import namespace="System.Text" #>
+<#@ import namespace="System.Threading" #>
+<#@ import namespace="System.Threading.Tasks" #>
+<#@ import namespace="System.Transactions" #>
+<#@ import namespace="System.Windows.Forms" #>
+
+<#@ import namespace="Microsoft.VisualStudio.TextTemplating" #>
+
+<#@ import namespace="Microsoft.SqlServer.Management.Common" #>
+<#@ import namespace="Microsoft.SqlServer.Management.Smo" #>
+
+<#@ import namespace="LayerCake.Generator.Commons" #>
+
+<#@ include file="Commons.ttinclude" #>
+

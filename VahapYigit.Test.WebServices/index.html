@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="appMonitoringWebApi">
+<head>
+	<title>VahapYigit.Test Dashboard</title>
+
+	<link rel="stylesheet" type="text/css" media="all" href="/Content/bootstrap.css" />
+	<link rel="stylesheet" type="text/css" media="all" href="/Content/bootstrap-theme.css" />
+	<link rel="stylesheet" type="text/css" media="all" href="/Content/main.css" />
+
+	<script type="text/javascript" language="javascript" src="/Scripts/jquery-2.1.3.js"></script>
+	<script type="text/javascript" language="javascript" src="/Scripts/bootstrap.js"></script>
+	<script type="text/javascript" language="javascript" src="/Scripts/angular.js"></script>
+	<script type="text/javascript" language="javascript" src="/Scripts/angular-route.js"></script>
+
+	<script type="text/javascript" language="javascript" src="/Scripts/appMonitoringWebApi.js"></script>
+</head>
+<body>
+
+	<header>
+		<nav class="navbar navbar-default navbar-fixed-top">
+			<div class="container-fluid">
+
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#">Dashboard</a>
+				</div>
+
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav">
+						<li><a href="#LoggingSystem">Logging System</a></li>
+						<li><a href="#CacheStatistics">Cache Statistics</a></li>
+						<li><a href="#ExecutionTracer">Execution Tracer</a></li>
+						<li><a href="#Tables">Tables</a></li>
+						<li><a href="#ProcessLogs">Process Logs</a></li>
+						<li><a href="#ProcessErrorLogs">Process Error Logs</a></li>
+					</ul>
+
+					<ul class="nav navbar-nav navbar-right">
+						<li class="dropdown">
+							<a href="#" onclick="javascript: return false;" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Others <span class="caret"></span></a>
+							<ul class="dropdown-menu" role="menu">
+								<li><a href="http://www.layercake-generator.net/" target="_blank">About</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</header>
+
+	<div id="mainContent">
+		<div class="alert alert-warning">
+			<p>To display information, use <b>admin</b> / <b>admin</b> (can be changed in the Web.config - AppSettings section)</p>
+		</div>
+		<div id="mainView" ng-controller="mainController">
+			<div ng-view></div>
+		</div>
+	</div>
+
+</body>
+</html>

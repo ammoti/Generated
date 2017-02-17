@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BD761820-64CF-46EB-A666-47DBC9C60EA6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>VahapYigit.Test.Business</RootNamespace>
+    <AssemblyName>VahapYigit.Test.Business</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <DocumentationFile>
+    </DocumentationFile>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Transactions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppBusiness\CommonBusiness.cs" />
+    <Compile Include="AppBusiness\AuthenticationBusiness.cs" />
+    <Compile Include="BusinessBase.cs" />
+    <Compile Include="BusinessHelper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Business\AppSettingsBusiness.custom.cs" />
+    <Compile Include="Business\ProcessErrorLogBusiness.custom.cs" />
+    <Compile Include="Business\ProcessLogBusiness.custom.cs" />
+    <Compile Include="Business\ExecutionTraceBusiness.custom.cs" />
+    <Compile Include="Tracers\ExecutionTracerBehavior.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Tracers\ExecutionTracerService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Business\UserRoleBusiness.custom.cs" />
+    <Compile Include="Business\UserBusiness.custom.cs" />
+    <Compile Include="Business\RoleBusiness.custom.cs" />
+    <Compile Include="Business\TranslationBusiness.custom.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\VahapYigit.Test.Core\VahapYigit.Test.Core.csproj">
+      <Project>{C8B244D8-7EE5-48B7-B8BD-1C687238EC12}</Project>
+      <Name>VahapYigit.Test.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VahapYigit.Test.Crud\VahapYigit.Test.Crud.csproj">
+      <Project>{53B4B846-832D-4E69-8737-AD8BD9B652EB}</Project>
+      <Name>VahapYigit.Test.Crud</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VahapYigit.Test.Models\VahapYigit.Test.Models.csproj">
+      <Project>{1EC26F9D-4CEC-4ED0-B2F9-493C6C443482}</Project>
+      <Name>VahapYigit.Test.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Extensions\System.Extensions.csproj">
+      <Project>{0B4C3CC6-DBCA-44E9-B2C6-BC6168EAC842}</Project>
+      <Name>System.Extensions</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AppBusiness\_README.TXT" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

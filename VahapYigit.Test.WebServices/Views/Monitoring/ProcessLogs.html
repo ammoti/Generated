@@ -1,0 +1,28 @@
+<div class="view">
+	<h1>Process Logs</h1>
+	<div ng-if="data == null"><img src="/Content/Images/loading.gif" title="Loading..." alt="Loading..." /></div>
+	<div ng-if="data != null">
+		<div class="row">
+			<div class="col-md-12">
+				<input type="text" class="form-control filter-control" ng-model="searchKey" placeholder="Filter..." />
+			</div>
+		</div>
+		<hr />
+		<table class="table table-hover table-condensed" data-toggle="table" data-cache="false">
+			<thead>
+				<tr class="bold">
+					<th style="width: 160px">Date</th>
+					<th>Procedure</th>
+					<th>Data</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="item in data | filter: searchKey">
+					<td>{{item.Date}}</td>
+					<td>{{item.Procedure}}</td>
+					<td>{{item.Data}}</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>

@@ -1,0 +1,36 @@
+<div class="view">
+	<h1>Execution Tracer</h1>
+	<div ng-if="data == null"><img src="/Content/Images/loading.gif" title="Loading..." alt="Loading..." /></div>
+	<div ng-if="data != null">
+		<div class="row">
+			<div class="col-md-12">
+				<input type="text" class="form-control filter-control" ng-model="searchKey" placeholder="Filter..." />
+			</div>
+		</div>
+		<hr />
+		<table class="table table-hover table-condensed" data-toggle="table" data-cache="false">
+			<thead>
+				<tr class="bold">
+					<th>Name</th>
+					<th class="right" style="width: 100px">Min (ms)</th>
+					<th class="right" style="width: 100px">Max (ms)</th>
+					<th class="right" style="width: 100px">Avg (ms)</th>
+					<th class="right">Total (hrs)</th>
+					<th class="right">Counter</th>
+					<th class="right">Last Call</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="item in data | filter: searchKey">
+					<td>{{item.Name}}</td>
+					<td class="right">{{item.MinDuration}}</td>
+					<td class="right">{{item.MaxDuration}}</td>
+					<td class="right">{{item.AvgDuration}}</td>
+					<td class="right">{{item.TotalDuration}}</td>
+					<td class="right">{{item.Counter}}</td>
+					<td class="right">{{item.LastCall}}</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>

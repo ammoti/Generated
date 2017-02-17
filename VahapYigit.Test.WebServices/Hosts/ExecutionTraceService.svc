@@ -1,0 +1,5 @@
+﻿<%@ServiceHost
+  Debug="true"
+  Language="C#"
+  Service="VahapYigit.Test.Services.ExecutionTraceService"
+  Factory="VahapYigit.Test.WebServices.CustomServiceHostFactory"%>

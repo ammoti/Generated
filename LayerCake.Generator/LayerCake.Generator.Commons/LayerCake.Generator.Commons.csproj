@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E8EBA269-0772-4363-97F5-52AD40C79F5E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LayerCake.Generator.Commons</RootNamespace>
+    <AssemblyName>LayerCake.Generator.Commons</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="JsonConfig, Version=1.0.5359.16918, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\JsonConfig.1.0.0\lib\JsonConfig.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="JsonFx, Version=2.0.1209.2802, Culture=neutral, PublicKeyToken=315052dd637f8a52, processorArchitecture=MSIL">
+      <HintPath>..\packages\JsonFx.2.0.1209.2802\lib\net40\JsonFx.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.ConnectionInfo, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Libraries\Microsoft SQL Server 12.0\Microsoft.SqlServer.ConnectionInfo.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Management.Sdk.Sfc, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Libraries\Microsoft SQL Server 12.0\Microsoft.SqlServer.Management.Sdk.Sfc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Smo, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Libraries\Microsoft SQL Server 12.0\Microsoft.SqlServer.Smo.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.SqlEnum, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Libraries\Microsoft SQL Server 12.0\Microsoft.SqlServer.SqlEnum.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.TextTemplating.11.0, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Libraries\Microsoft VisualStudio TextTemplating\Microsoft.VisualStudio.TextTemplating.11.0.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.TextTemplating.Interfaces.10.0, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Libraries\Microsoft VisualStudio TextTemplating\Microsoft.VisualStudio.TextTemplating.Interfaces.10.0.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.TextTemplating.Interfaces.11.0, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Libraries\Microsoft VisualStudio TextTemplating\Microsoft.VisualStudio.TextTemplating.Interfaces.11.0.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Attributes\SmartAssemblyAttributes.cs" />
+    <Compile Include="Contexts\BusinessContext.cs" />
+    <Compile Include="Contexts\ProcessorContext.cs" />
+    <Compile Include="Contexts\SmoContext.cs" />
+    <Compile Include="Enums\ProcessorContextLoadStatusEnum.cs" />
+    <Compile Include="Enums\ProcessStateEnum.cs" />
+    <Compile Include="GlobalAssemblyInfo.cs" />
+    <Compile Include="Helpers\DatabaseHelper.cs" />
+    <Compile Include="Helpers\JsonConfigHelper.cs" />
+    <Compile Include="Helpers\SmoHelper.cs">
+      <SubType>
+      </SubType>
+    </Compile>
+    <Compile Include="ModelDescriptor\ModelDescriptor.cs" />
+    <Compile Include="ModelDescriptor\ModelDescriptorError.cs" />
+    <Compile Include="ModelDescriptor\ModelDescriptorSchema.cs" />
+    <Compile Include="Models\CodeRefInfo.cs" />
+    <Compile Include="Models\ConfigEndpointItem.cs" />
+    <Compile Include="Models\ConfigServiceItem.cs" />
+    <Compile Include="Models\LanguageColumnInfo.cs" />
+    <Compile Include="Models\RelationInfo.cs" />
+    <Compile Include="Models\SmoForeignKeyColumnInfo.cs" />
+    <Compile Include="Models\SqlCSharpConvertionTypeInfo.cs" />
+    <Compile Include="Models\TranslationInfo.cs" />
+    <Compile Include="Models\ZeroToManyRelationInfo.cs" />
+    <Compile Include="Models\ZeroToOneRelationInfo.cs" />
+    <Compile Include="Processor\Behaviors\CodeRefProcessorBehavior.cs" />
+    <Compile Include="Processor\Behaviors\IProcessorBehavior.cs" />
+    <Compile Include="Processor\Behaviors\TranslationProcessorBehavior.cs" />
+    <Compile Include="Processor\Behaviors\FullProcessorBehavior.cs" />
+    <Compile Include="Processor\Processor.cs" />
+    <Compile Include="Processor\ProcessorDelegates.cs" />
+    <Compile Include="Processor\ProcessProgressionEventArgs.cs" />
+    <Compile Include="Processor\ProcessMessageEventArgs.cs" />
+    <Compile Include="Processor\ProcessMessageType.cs" />
+    <Compile Include="Processor\ProcessorParameters.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TemplateDefinitions\Definitions\Src\Business\Business\BusinessCustomCsTemplateDefinition.cs" />
+    <Compile Include="TemplateDefinitions\Definitions\Src\Contracts\Contracts\ContractGeneratedCsBusinessTemplateDefinition.cs" />
+    <Compile Include="TemplateDefinitions\Definitions\Src\Contracts\Contracts\ContractGeneratedCsTableTemplateDefinition.cs" />
+    <Compile Include="TemplateDefinitions\Definitions\Src\Core\Collections\LanguageCollectionGeneratedCsTemplateDefinition.cs" />
+    <Compile Include="TemplateDefinitions\Definitions\Src\Core\Enums\CulturesGeneratedCsTemplateDefinition.cs" />
+    <Compile Include="TemplateDefinitions\Definitions\Src\Core\Translations\TranslationEnumGeneratedCsTemplateDefinition.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TemplateDefinitions\Definitions\Src\Crud\Crud\CrudCustomCsTemplateDefinition.cs" />
+    <Compile Include="TemplateDefinitions\Definitions\Src\Crud\Crud\CrudGeneratedCsTemplateDefinition.cs" />
+    <Compile Include="TemplateDefinitions\Definitions\Src\Database\dbo\Scripts\InsertAllStoredProceduresGeneratedSqlTemplateDefinition.cs" />
+    <Compile Include="TemplateDefinitions\Definitions\Src\Database\dbo\Scripts\Post-Deployment\TranslationInitializationGeneratedSqlTemplateDefinition.cs" />
+    <Compile Include="TemplateDefinitions\Definitions\Src\Database\dbo\Stored Procedures\CountGeneratedSqlTemplateDefinition.cs" />
+    <Compile Include="TemplateDefinitions\Definitions\Src\Database\dbo\Stored Procedures\DeleteGeneratedSqlTemplateDefinition.cs" />
+    <Compile Include="TemplateDefinitions\Definitions\Src\Database\dbo\Stored Procedures\GetGeneratedSqlTemplateDefinition.cs" />
+    <Compile Include="TemplateDefinitions\Definitions\Src\Database\dbo\Stored Procedures\SaveGeneratedSqlTemplateDefinition.cs" />
+    <Compile Include="TemplateDefinitions\Definitions\Src\Database\dbo\Stored Procedures\SearchGeneratedSqlTemplateDefinition.cs" />
+    <Compile Include="TemplateDefinitions\Definitions\Src\Database\dbo\Stored Procedures\SetLockGeneratedSqlTemplateDefinition.cs" />
+    <Compile Include="TemplateDefinitions\Definitions\Src\Models\Common\EntityBaseGeneratedCsTemplateDefinition.cs" />
+    <Compile Include="TemplateDefinitions\Definitions\Src\Models\Interfaces\IEntityGeneratedCsTemplateDefinition.cs" />
+    <Compile Include="TemplateDefinitions\Definitions\Src\Models\Entities\EntityCustomCsTemplateDefinition.cs" />
+    <Compile Include="TemplateDefinitions\Definitions\Src\Models\Entities\EntityGeneratedCsTemplateDefinition.cs" />
+    <Compile Include="TemplateDefinitions\Definitions\Src\Models\MemberContextGeneratedCsTemplateDefinition.cs" />
+    <Compile Include="TemplateDefinitions\Definitions\Src\Services\ServiceContextGeneratedCsTemplateDefinition.cs" />
+    <Compile Include="TemplateDefinitions\Definitions\Src\Services\Services\ServicesGeneratedCsBusinessTemplateDefinition.cs" />
+    <Compile Include="TemplateDefinitions\Definitions\Src\Services\Services\ServicesGeneratedCsTableTemplateDefinition.cs" />
+    <Compile Include="TemplateDefinitions\Definitions\Src\WebServices\Config\ServiceModelServicesGeneratedConfigTemplateDefinition.cs" />
+    <Compile Include="TemplateDefinitions\Definitions\Src\WebServices\Hosts\ServiceSvcBusinessTemplateDefinition.cs" />
+    <Compile Include="TemplateDefinitions\Definitions\Src\WebServices\Hosts\ServiceSvcTableTemplateDefinition.cs" />
+    <Compile Include="TemplateDefinitions\Definitions\Tests\Tests\WcfServices\WcfServiceTestsGeneratedCsBusinessTemplateDefinition.cs" />
+    <Compile Include="TemplateDefinitions\Definitions\Tests\Tests\WcfServices\WcfServiceTestsGeneratedCsTableTemplateDefinition.cs" />
+    <Compile Include="TemplateDefinitions\Definitions\Tests\Tests\Config\ServiceModelClientGeneratedConfigTemplateDefinition.cs" />
+    <Compile Include="TemplateDefinitions\Definitions\Tests\Tests\Core\Collections\LanguageCollectionTestsGeneratedCsTemplateDefinition.cs" />
+    <Compile Include="TemplateDefinitions\Definitions\Tests\Tests\Models\ModelTestsCustomCsTemplateDefinition.cs" />
+    <Compile Include="TemplateDefinitions\Definitions\Tests\Tests\Models\ModelTestsGeneratedCsTemplateDefinition.cs" />
+    <Compile Include="TemplateDefinitions\Definitions\Tests\Tests\Services\ServiceTestsCustomCsTemplateDefinition.cs" />
+    <Compile Include="TemplateDefinitions\Definitions\Tests\Tests\Services\ServiceTestsGeneratedCsTemplateDefinition.cs" />
+    <Compile Include="TemplateDefinitions\ITemplateDefinition.cs" />
+    <Compile Include="TemplateDefinitions\TemplateDefinitionHelper.cs" />
+    <Compile Include="TemplateDefinitions\TemplateDefinitionType.cs" />
+    <Compile Include="TextTemplating\TextTemplatingEngine.cs" />
+    <Compile Include="TextTemplating\TextTemplatingEngineDelegates.cs" />
+    <Compile Include="TextTemplating\TextTemplatingEngineTemplateEventArgs.cs" />
+    <Compile Include="TextTemplating\TextTemplatingEngineGeneratedFileEventArgs.cs" />
+    <Compile Include="TextTemplating\TextTemplatingEngineHost.cs" />
+    <Compile Include="TextTemplating\TextTemplatingOutputFileDefinition.cs" />
+    <Compile Include="TextTemplating\TextTemplatingParameters.cs" />
+    <Compile Include="TextTemplating\TextTemplatingProcessContext.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\System.Extensions\System.Extensions.csproj">
+      <Project>{0B4C3CC6-DBCA-44E9-B2C6-BC6168EAC842}</Project>
+      <Name>System.Extensions</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Templates\Commons\Commons.ttinclude">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Templates\Commons\Includes.ttinclude">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Templates\Projects\Src\Business\Business\Business.custom.cs.tt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Templates\Projects\Src\Contracts\Contracts\IContract.generated.cs.tt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Templates\Projects\Src\Core\Collections\LanguageCollection.generated.cs.tt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Templates\Projects\Src\Core\Enums\Cultures.generated.cs.tt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Templates\Projects\Src\Core\Translations\TranslationEnum.generated.cs.tt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Templates\Projects\Src\Database\dbo\Scripts\InsertAllStoredProcedures.generated.sql.tt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Templates\Projects\Src\Database\dbo\Scripts\Post-Deployment\TranslationInitialization.generated.sql.tt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Templates\Projects\Src\Database\dbo\Stored Procedures\Count.generated.sql.tt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Templates\Projects\Src\Database\dbo\Stored Procedures\Delete.generated.sql.tt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Templates\Projects\Src\Database\dbo\Stored Procedures\Get.generated.sql.tt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Templates\Projects\Src\Database\dbo\Stored Procedures\Save.generated.sql.tt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Templates\Projects\Src\Database\dbo\Stored Procedures\Search.generated.sql.tt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Templates\Projects\Src\Database\dbo\Stored Procedures\SetLock.generated.sql.tt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Templates\Projects\Src\Models\Common\EntityBase.generated.cs.tt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Templates\Projects\Src\Models\Entities\Entity.custom.cs.tt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Templates\Projects\Src\Models\Entities\Entity.generated.cs.tt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Templates\Projects\Src\Models\MemberContext.generated.cs.tt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Templates\Projects\Src\Services\ServiceContext.generated.cs.tt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Templates\Projects\Src\Services\Services\Service.generated.cs.tt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Templates\Projects\Src\WebServices\Config\ServiceModel.Services.generated.config.tt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Templates\Projects\Src\WebServices\Hosts\Service.svc.tt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Templates\Projects\Tests\Tests\WcfServices\WcfServiceTests.generated.cs.tt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Templates\Projects\Tests\Tests\Config\ServiceModel.Client.generated.config.tt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Templates\Projects\Tests\Tests\Core\Collections\LanguageCollectionTests.generated.cs.tt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Templates\Projects\Tests\Tests\Models\ModelTests.custom.cs.tt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Templates\Projects\Tests\Tests\Models\ModelTests.generated.cs.tt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Templates\Projects\Tests\Tests\Services\ServiceTests.custom.cs.tt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Templates\Projects\Tests\Tests\Services\ServiceTests.generated.cs.tt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Libraries\v4.5\System.ServiceModel.dll" />
+    <Content Include="Libraries\v4.5\System.Transactions.dll" />
+    <Content Include="Libraries\v4.5\System.Transactions.xml" />
+    <Content Include="Libraries\v4.5\_README.TXT" />
+    <Content Include="Templates\Commons\_IMPORTANT.TXT" />
+    <Content Include="Templates\IMPORTANT.TXT" />
+    <None Include="Templates\Projects\Src\Crud\Crud\Crud.custom.cs.tt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Templates\Projects\Src\Crud\Crud\Crud.generated.cs.tt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Templates\Projects\Src\Models\Interfaces\IEntity.generated.cs.tt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>xcopy /y "$(ProjectDir)Libraries\v4.5\*.dll" "$(SolutionDir)LayerCake.Generator\$(OutDir)"
+xcopy /y "$(ProjectDir)Libraries\v4.5\*.dll" "$(SolutionDir)LayerCake.Generator.Cmd\$(OutDir)"</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

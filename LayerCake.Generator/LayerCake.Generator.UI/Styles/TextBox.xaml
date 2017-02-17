@@ -1,0 +1,83 @@
+<ResourceDictionary
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:localConverters="clr-namespace:LayerCake.Generator.UI.Converters"
+	xmlns:local="clr-namespace:LayerCake.Generator.UI.Tools">
+
+	<localConverters:ValidationErrorConverter
+		x:Key="ValidationErrorConverter" />
+
+	<!-- TextBox (if modified then edit the TextBox.xaml too) -->
+	<Style
+		TargetType="{x:Type TextBox}">
+		<Setter
+			Property="Padding"
+			Value="2" />
+		<Setter
+			Property="Validation.ErrorTemplate">
+			<Setter.Value>
+				<ControlTemplate>
+					<DockPanel>
+						<Border
+							BorderBrush="Red"
+							BorderThickness="2"
+							CornerRadius="0">
+							<AdornedElementPlaceholder/>
+						</Border>
+						<Grid
+							DockPanel.Dock="Right"
+							Width="16"
+							Height="16"
+							VerticalAlignment="Center"
+							Margin="-26 0 0 0">
+							<Ellipse
+								Width="16"
+								Height="16"
+								Fill="Red"/>
+							<Ellipse
+								Width="3"
+								Height="8"
+								VerticalAlignment="Top"
+								HorizontalAlignment="Center"
+								Margin="0 2 0 0"
+								Fill="White"/>
+							<Ellipse
+								Width="2"
+								Height="2"
+								VerticalAlignment="Bottom"
+								HorizontalAlignment="Center"
+								Margin="0 0 0 2"
+								Fill="White"/>
+						</Grid>
+					</DockPanel>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+		<Style.Triggers>
+			<Trigger
+				Property="local:Context.IsRequired"
+				Value="True">
+				<Setter
+				  Property="Background"
+				  Value="#FFF0F5" />
+			</Trigger>
+			<Trigger
+				Property="IsEnabled"
+				Value="False">
+				<Setter
+				  Property="Background"
+				  Value="WhiteSmoke" />
+			</Trigger>
+			<!-- Validation -->
+			<Trigger
+				Property="Validation.HasError"
+				Value="true">
+				<Setter
+					Property="ToolTip"
+					Value="{Binding RelativeSource={x:Static RelativeSource.Self}, Path=(Validation.Errors), Converter={StaticResource ValidationErrorConverter}}"/>
+			</Trigger>
+		</Style.Triggers>
+
+	</Style>
+
+</ResourceDictionary>

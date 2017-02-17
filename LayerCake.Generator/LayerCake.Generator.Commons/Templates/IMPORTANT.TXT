@@ -1,0 +1,23 @@
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! BEFORE CUSTOMIZING T4 TEMPLATES                                                                       !
+! -------------------------------------------------------------------------------------------------------
+! MAKE SURE YOUR PROJECT IS MANAGED BY A SOURCE CODE MANAGEMENT TO ROLLBACK                             !
+! BROKEN TEMPLATES WILL GENERATE BROKEN SOURCE CODE                                                     !
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+ 1. Copy/Paste the whole Templates\ directory into your project directory
+
+    ie, C:\Dev\Com.YourCompany.YourProject\Templates
+
+ 2. Open the project configuration file
+
+    ie, C:\Dev\Com.YourCompany.YourProject\Com.YourCompany.YourProject.config
+
+3. Edit the LcgContext.AdvancedOptions.TemplateRootPath entry
+
+   ie, LcgContext.AdvancedOptions.TemplateRootPath =  = C:\Dev\Com.YourCompany.YourProject\Templates
+
+ 4. Add the new Templates\* directory and files and commit on the source code management
+
+ You can now modify the templates

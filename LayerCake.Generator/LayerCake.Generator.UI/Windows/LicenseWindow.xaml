@@ -1,0 +1,50 @@
+<Window
+	x:Class="LayerCake.Generator.UI.Windows.LicenseWindow"
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	Title="License"
+	Icon="/LayerCake.Generator.UI;component/Resources/Icons/App.ico"
+	WindowStartupLocation="CenterOwner"
+	Background="WhiteSmoke"
+	ResizeMode="NoResize"
+	Height="376"
+	Width="572">
+
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition
+				Height="*" />
+			<RowDefinition
+				Height="Auto" />
+		</Grid.RowDefinitions>
+
+		<Border
+			Grid.Row="0"
+			BorderBrush="LightGray"
+			BorderThickness="1"
+			Margin="10"
+			Padding="10">
+
+			<TextBox
+				x:Name="LicenseTextBox"
+				IsReadOnly="True"
+				Background="Transparent"
+				TextWrapping="Wrap"
+				AcceptsReturn="True"
+				VerticalScrollBarVisibility="Visible" />
+
+		</Border>
+
+		<Button
+			Grid.Row="1"
+			Margin="0 0 10 10"
+			Height="30"
+			Width="128"
+			HorizontalAlignment="Right"
+			Content="Close"
+			Click="OnCloseClick"
+			IsCancel="True" />
+
+	</Grid>
+
+</Window>

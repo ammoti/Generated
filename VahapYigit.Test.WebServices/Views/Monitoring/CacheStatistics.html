@@ -1,0 +1,37 @@
+<div class="view">
+	<h1>Cache Statistics</h1>
+	<div ng-if="data == null"><img src="/Content/Images/loading.gif" title="Loading..." alt="Loading..." /></div>
+	<div ng-if="data != null">
+		<div class="row">
+			<div class="col-md-1">
+				<input type="text" class="form-control filter-control" ng-model="searchKey" placeholder="Filter..." />
+			</div>
+			<div class="col-md-11 right">
+				<p>Count: <strong>{{itemCount}}</strong> | Requests: <strong>{{requestCount}}</strong> | Hit: <strong class="cache-hit">{{hitCountPercentage}}%</strong> | Miss: <strong class="cache-miss">{{missCountPercentage}}%</strong></p>
+			</div>
+		</div>
+		<hr />
+		<table class="table table-hover table-condensed" data-toggle="table" data-cache="false">
+			<thead>
+				<tr class="bold">
+					<th>Key</th>
+					<th>Description</th>
+					<th class="right" style="width: 120px">Expired?</th>
+					<th class="right">Expiration</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="item in data | filter: searchKey" ng-class="{warning: item.IsExpired || item.Expiration == '0 sec'}">
+					<td>{{item.Key}}</td>
+					<td>{{item.Description}}</td>
+					<td class="right">{{item.IsExpired}}</td>
+					<td class="right">
+						<div ng-if="item.Expiration == 'never'" title="Expiration > 2 months">&infin;</div>
+						<div ng-if="item.Expiration != 'never'">{{item.Expiration}}</div>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<div ng-if="itemCount > 0 && (data == null || data.length == 0)"><em>The current cache implementation does not support content view</em></div>
+	</div>
+</div>

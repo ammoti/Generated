@@ -1,0 +1,89 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LayerCake.Generator", "LayerCake.Generator\LayerCake.Generator.csproj", "{CC301952-7C4B-49D4-9DAA-C9D4F3E01228}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{2A1CC82B-5127-4691-90FC-4B41943BB747}"
+	ProjectSection(SolutionItems) = preProject
+		_README.TXT = _README.TXT
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "System.Extensions", "..\System.Extensions\System.Extensions.csproj", "{0B4C3CC6-DBCA-44E9-B2C6-BC6168EAC842}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LayerCake.Generator.Cmd", "LayerCake.Generator.Cmd\LayerCake.Generator.Cmd.csproj", "{90CD120A-CD8D-48E8-8633-12E04C464ACA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LayerCake.Generator.UI", "LayerCake.Generator.UI\LayerCake.Generator.UI.csproj", "{6B92B093-3C78-401C-B339-0423A85F457B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LayerCake.Generator.Commons", "LayerCake.Generator.Commons\LayerCake.Generator.Commons.csproj", "{E8EBA269-0772-4363-97F5-52AD40C79F5E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CC301952-7C4B-49D4-9DAA-C9D4F3E01228}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC301952-7C4B-49D4-9DAA-C9D4F3E01228}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC301952-7C4B-49D4-9DAA-C9D4F3E01228}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{CC301952-7C4B-49D4-9DAA-C9D4F3E01228}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{CC301952-7C4B-49D4-9DAA-C9D4F3E01228}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{CC301952-7C4B-49D4-9DAA-C9D4F3E01228}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC301952-7C4B-49D4-9DAA-C9D4F3E01228}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC301952-7C4B-49D4-9DAA-C9D4F3E01228}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{CC301952-7C4B-49D4-9DAA-C9D4F3E01228}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{CC301952-7C4B-49D4-9DAA-C9D4F3E01228}.Release|x86.ActiveCfg = Release|Any CPU
+		{0B4C3CC6-DBCA-44E9-B2C6-BC6168EAC842}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B4C3CC6-DBCA-44E9-B2C6-BC6168EAC842}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B4C3CC6-DBCA-44E9-B2C6-BC6168EAC842}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{0B4C3CC6-DBCA-44E9-B2C6-BC6168EAC842}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{0B4C3CC6-DBCA-44E9-B2C6-BC6168EAC842}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{0B4C3CC6-DBCA-44E9-B2C6-BC6168EAC842}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B4C3CC6-DBCA-44E9-B2C6-BC6168EAC842}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0B4C3CC6-DBCA-44E9-B2C6-BC6168EAC842}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{0B4C3CC6-DBCA-44E9-B2C6-BC6168EAC842}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{0B4C3CC6-DBCA-44E9-B2C6-BC6168EAC842}.Release|x86.ActiveCfg = Release|Any CPU
+		{90CD120A-CD8D-48E8-8633-12E04C464ACA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90CD120A-CD8D-48E8-8633-12E04C464ACA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90CD120A-CD8D-48E8-8633-12E04C464ACA}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{90CD120A-CD8D-48E8-8633-12E04C464ACA}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{90CD120A-CD8D-48E8-8633-12E04C464ACA}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{90CD120A-CD8D-48E8-8633-12E04C464ACA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90CD120A-CD8D-48E8-8633-12E04C464ACA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{90CD120A-CD8D-48E8-8633-12E04C464ACA}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{90CD120A-CD8D-48E8-8633-12E04C464ACA}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{90CD120A-CD8D-48E8-8633-12E04C464ACA}.Release|x86.ActiveCfg = Release|Any CPU
+		{6B92B093-3C78-401C-B339-0423A85F457B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B92B093-3C78-401C-B339-0423A85F457B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B92B093-3C78-401C-B339-0423A85F457B}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{6B92B093-3C78-401C-B339-0423A85F457B}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{6B92B093-3C78-401C-B339-0423A85F457B}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{6B92B093-3C78-401C-B339-0423A85F457B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B92B093-3C78-401C-B339-0423A85F457B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6B92B093-3C78-401C-B339-0423A85F457B}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{6B92B093-3C78-401C-B339-0423A85F457B}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{6B92B093-3C78-401C-B339-0423A85F457B}.Release|x86.ActiveCfg = Release|Any CPU
+		{E8EBA269-0772-4363-97F5-52AD40C79F5E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8EBA269-0772-4363-97F5-52AD40C79F5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8EBA269-0772-4363-97F5-52AD40C79F5E}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{E8EBA269-0772-4363-97F5-52AD40C79F5E}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{E8EBA269-0772-4363-97F5-52AD40C79F5E}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{E8EBA269-0772-4363-97F5-52AD40C79F5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8EBA269-0772-4363-97F5-52AD40C79F5E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E8EBA269-0772-4363-97F5-52AD40C79F5E}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{E8EBA269-0772-4363-97F5-52AD40C79F5E}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{E8EBA269-0772-4363-97F5-52AD40C79F5E}.Release|x86.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(SubversionScc) = preSolution
+		Svn-Managed = True
+		Manager = AnkhSVN - Subversion Support for Visual Studio
+	EndGlobalSection
+EndGlobal
